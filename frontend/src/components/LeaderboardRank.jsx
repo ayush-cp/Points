@@ -9,7 +9,6 @@ import API_ENDPOINT from "../Constants";
 const LeaderboardRank = () => {
   const [pointsHisory, setPointsHistory] = useState(false);
   const [users, setUsers] = useState([]);
-  const [dailyHistory, setDailyHistory] = useState(null);
   const {user, setUser} = useContext(UserContext)
   const [userHistory, setUserHistory] = useState("");
   const [timeActive, setTimeActive] = useState("daily");
@@ -19,7 +18,6 @@ const LeaderboardRank = () => {
   useEffect(() => {
     const getTimeData = async () => {
       try {
-        // console.log("Fetching user data based on timeActive");
   
         const response = await axios.get(
           `${API_ENDPOINT}/api/user/v1/your-${timeActive}-history`
@@ -38,24 +36,21 @@ const LeaderboardRank = () => {
         
        
         
-        // console.log("Sorted user history", sortedUsers);
       } catch (error) {
         console.error("Error fetching users data: ", error);
       }
     };
     
     getTimeData();
-  }, [timeActive, user]);  // Add `user` to dependencies if needed
+  }, [timeActive, user]); 
   
 
   const handleHistoryPopup = (username) => {
-    // console.log("inside popup close")
     setUserHistory(username);
     setPointsHistory(true);
   };
 
   const closeHistoryPopup = () => {
-    // console.log("inside popup close")
     setPointsHistory(false);
   };
 

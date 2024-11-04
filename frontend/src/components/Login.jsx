@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import OpenEye from "../assets/eye.png";
-import CloseEye from "../assets/hidden.png";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "./UserContext";
 import { toast } from "react-toastify";
@@ -30,7 +29,6 @@ const Login = () => {
         }
       );
 
-      // console.log("response data", response.data);
       setUser(response.data.data);
 
 

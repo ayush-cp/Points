@@ -12,7 +12,6 @@ const Leaderboard = () => {
     const {user, setUser} = useContext(UserContext)
     const [showLeaderboard, setShowLeaderboard] = useState(false)
 
-    // console.log(user)
   return (
     <div className='w-[45vw] min-w-[380px] h-[85vh] flex flex-col gap-[15px] bg-gray-100'>
         <div className='w-full h-max bg-blue-400 flex flex-row justify-between items-center p-2 px-4 relative'>

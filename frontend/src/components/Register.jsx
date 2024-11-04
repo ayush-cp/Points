@@ -37,7 +37,6 @@ const Register = () => {
       );
 
       console.log("response data", response.data);
-      // setUser(response.data.data)
       console.log(user);
       
       navigate('/')

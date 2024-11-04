@@ -13,7 +13,6 @@ const TestHistory = ({popup, userData}) => {
           const response = await axios.post(`${API_ENDPOINT}/api/user/v1/your-history`, {username})
           const data = response.data.data;
           setUserHistory(data)
-          // console.log("response history ", data)
         } catch (error) {
           console.log( "Error fetching history ", error);
           // throw error;      

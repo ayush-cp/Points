@@ -7,8 +7,7 @@ import API_ENDPOINT from "../Constants";
 
 const HomePage = ({ timeGroup }) => {
   const [users, setUsers] = useState([]);
-  const [userPoints, setUserPoints] = useState("");
-  const {user, setUser} = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext);
   useEffect(() => {
     const allUsers = async () => {
       try {
@@ -17,7 +16,6 @@ const HomePage = ({ timeGroup }) => {
         );
         const users = response.data.data;
         setUsers(users);
-        // console.log(users);
       } catch (error) {
         console.log("Error fetching users ", error);
         // throw error;
@@ -28,20 +26,17 @@ const HomePage = ({ timeGroup }) => {
 
   const addPoints = async (username) => {
     try {
-      if(!user){
+      if (!user) {
         toast.error("Please login to add points");
         return;
       }
       const response = await axios.patch(
         `${API_ENDPOINT}/api/user/v1/claim-points`,
-        {username}
+        { username }
       );
-      // const data = response.data.data;
-      // setUserPoints(data.username)
       if (user) {
         toast.success(`${response.data.message} for ${user.username}`);
       }
-      // console.log("response is ",response);
     } catch (error) {
       console.log("Error occured while adding points, ", error);
       // throw error;
@@ -56,7 +51,7 @@ const HomePage = ({ timeGroup }) => {
             <div
               key={user._id}
               className="w-full h-[70px] bg-slate-100 flex flex-row justify-between items-center px-4 transition-all cursor-pointer hover:bg-slate-200"
-              onClick={()=>addPoints(user.username)}
+              onClick={() => addPoints(user.username)}
             >
               <div className="flex flex-row items-center gap-1">
                 <div className="w-10 h-10">

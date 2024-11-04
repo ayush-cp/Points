@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
-import profile from "../assets/profile.png"
-import { UserContext } from "./UserContext";
+import React from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
 
