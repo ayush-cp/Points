@@ -8,7 +8,7 @@ const Home = () => {
   const {user, setUser} = useContext(UserContext)
   useEffect(() => {
     
-    console.log(user)
+    // console.log(user)
     
   }, [])
   

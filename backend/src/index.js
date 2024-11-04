@@ -50,6 +50,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(process.env.PORT || 7000, async () => {
-  console.log(`Server is running on port ${process.env.PORT ||7000}`);
+  // console.log(`Server is running on port ${process.env.PORT ||7000}`);
   await connectDb();
 });

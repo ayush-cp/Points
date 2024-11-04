@@ -3,7 +3,6 @@ import profile from "../assets/profile.png"
 import { UserContext } from "./UserContext";
 import { Link } from "react-router-dom";
 const Navbar = () => {
-  const {user, setUser} = useContext(UserContext)
 
   return (
     <div className="w-full h-max bg-gray-700 flex flex-row items-center justify-start p-2 px-4">

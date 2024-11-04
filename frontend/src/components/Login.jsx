@@ -17,7 +17,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("inside func")
     try {
       const data = {
         username,
@@ -31,10 +30,9 @@ const Login = () => {
         }
       );
 
-      console.log("response data", response.data);
+      // console.log("response data", response.data);
       setUser(response.data.data);
 
-      console.log(user);
 
       navigate('/')
     } catch (error) {

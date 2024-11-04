@@ -8,16 +8,15 @@ const TestHistory = ({popup, userData}) => {
     useEffect(() => {
       
     const handleHistoryPopup = async(username) => {
-        // console.log("inside popup open")
-        // setPointsHistory(true);
+
         try {
           const response = await axios.post(`${API_ENDPOINT}/api/user/v1/your-history`, {username})
           const data = response.data.data;
           setUserHistory(data)
-          console.log("response history ", data)
+          // console.log("response history ", data)
         } catch (error) {
           console.log( "Error fetching history ", error);
-          throw error;      
+          // throw error;      
         }
     
       };

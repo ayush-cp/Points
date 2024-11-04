@@ -19,7 +19,7 @@ const LeaderboardRank = () => {
   useEffect(() => {
     const getTimeData = async () => {
       try {
-        console.log("Fetching user data based on timeActive");
+        // console.log("Fetching user data based on timeActive");
   
         const response = await axios.get(
           `${API_ENDPOINT}/api/user/v1/your-${timeActive}-history`
@@ -38,7 +38,7 @@ const LeaderboardRank = () => {
         
        
         
-        console.log("Sorted user history", sortedUsers);
+        // console.log("Sorted user history", sortedUsers);
       } catch (error) {
         console.error("Error fetching users data: ", error);
       }

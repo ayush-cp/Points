@@ -17,10 +17,10 @@ const HomePage = ({ timeGroup }) => {
         );
         const users = response.data.data;
         setUsers(users);
-        console.log(users);
+        // console.log(users);
       } catch (error) {
         console.log("Error fetching users ", error);
-        throw error;
+        // throw error;
       }
     };
     allUsers();

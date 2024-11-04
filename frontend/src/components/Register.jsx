@@ -20,7 +20,6 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("inside func")
     try {
       const data = {
         username,
@@ -38,7 +37,7 @@ const Register = () => {
       );
 
       console.log("response data", response.data);
-      setUser(response.data.data)
+      // setUser(response.data.data)
       console.log(user);
       
       navigate('/')
