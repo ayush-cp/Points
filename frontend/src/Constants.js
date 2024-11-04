@@ -1,3 +1,3 @@
-const API_ENDPOINT = "http://localhost:7000"
+const API_ENDPOINT = "https://points-backend-wrdl.onrender.com"
 
 export default API_ENDPOINT;
